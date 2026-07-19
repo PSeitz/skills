@@ -8,13 +8,19 @@ A collection of [pi](https://github.com/earendil-works/pi-coding-agent) / Claude
 curl -L https://raw.github.com/PSeitz/skills/main/install.sh | sh
 ```
 
-This clones the repo into `~/.agents/`. Re-run to update.
+This clones the repo into `~/.agents/skills/`. Re-run to update.
 
 ## Skills
 
 | Skill | Description |
 |-------|-------------|
-| `optimize-rust` | Profile and optimize Rust code with `perf` (Linux) or `instruments` (macOS). Measure first, then change. |
+| `commit` | Create git commits with user approval and no AI attribution |
+| `describe-pr` | Generate a comprehensive PR description and open a pull request |
+| `find-skills` | Discover and install agent skills from the ecosystem |
+| `improve-one-thing` | Find one high-leverage improvement, make it, and explain it |
+| `optimize-rust` | Profile and optimize Rust code with `perf` (Linux) or `instruments` (macOS) |
+| `profile` | Linux performance profiling with `perf` — hotspots, call stacks, counters |
+| `simplify-one-thing` | Find one unnecessarily complex thing, simplify it, and explain the change |
 
 ## What's a Skill?
 
