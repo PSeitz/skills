@@ -21,6 +21,7 @@ This clones the repo into `~/.agents/skills/`. Re-run to update.
 | `optimize-rust` | Profile and optimize Rust code with `perf` (Linux) or `instruments` (macOS) |
 | `profile` | Linux performance profiling with `perf` — hotspots, call stacks, counters |
 | `simplify-one-thing` | Find one unnecessarily complex thing, simplify it, and explain the change |
+| `handoff` | Compact the current conversation into a handoff document for another agent |
 
 ## What's a Skill?
 
