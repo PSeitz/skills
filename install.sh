@@ -2,7 +2,7 @@
 set -e
 
 SKILLS_REPO="https://github.com/PSeitz/skills.git"
-TARGET_DIR="${HOME}/.agents"
+TARGET_DIR="${HOME}/.agents/skills"
 
 echo "==> Installing PSeitz/skills into ${TARGET_DIR}..."
 
@@ -20,5 +20,5 @@ else
     git checkout -b main FETCH_HEAD
 fi
 
-echo "==> Done! Skills installed to ${TARGET_DIR}/skills/"
-ls "${TARGET_DIR}/skills/"
+echo "==> Done!"
+ls "${TARGET_DIR}/"
