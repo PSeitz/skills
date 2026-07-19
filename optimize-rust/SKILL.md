@@ -6,6 +6,7 @@ description: >-
   faster", "optimize", "profile", or "why is this slow".
 argument-hint: "[file-or-function-or-benchmark]"
 allowed-tools: Read Grep Glob Bash(cargo *) Bash(perf *) Bash(flamegraph *)
+disable-model-invocation: true
 ---
 
 # Rust Performance Optimization

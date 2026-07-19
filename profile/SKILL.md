@@ -2,6 +2,7 @@
 name: profile
 description: Linux-only performance profiling workflow using perf. Use when investigating slow code, benchmark regressions, CPU hotspots, call stacks, or when the user asks to profile a command, test, or benchmark on Linux.
 compatibility: Linux with perf installed. Requires sufficient perf_event permissions for sampling.
+disable-model-invocation: true
 ---
 
 # Profile
