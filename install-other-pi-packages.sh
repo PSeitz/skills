@@ -13,14 +13,13 @@ PACKAGES=(
 
   # git packages
   git:github.com/PSeitz/skills
+  git:github.com/PSeitz/no-expert-pi-package
+  git:github.com/PSeitz/prompt-history-pi-package
 )
 
-# Subdirectories of PSeitz/my-pi-packages — not installable via git
-# because pi doesn't support subdirectory refs (e.g. git:github.com/user/repo/subdir).
-# These need their own repos or npm packages:
-#   ./no-expert-pi-package
-#   ./pi-skills
-#   ./prompt-history-pi-package
+# PSeitz/pi-skills — no standalone repo yet.
+# Create one at github.com/PSeitz/pi-skills, then add:
+#   git:github.com/PSeitz/pi-skills
 
 for pkg in "${PACKAGES[@]}"; do
   echo "pi install $* $pkg"
