@@ -17,10 +17,6 @@ PACKAGES=(
   git:github.com/PSeitz/prompt-history-pi-package
 )
 
-# PSeitz/pi-skills — no standalone repo yet.
-# Create one at github.com/PSeitz/pi-skills, then add:
-#   git:github.com/PSeitz/pi-skills
-
 for pkg in "${PACKAGES[@]}"; do
   echo "pi install $* $pkg"
   pi install "$@" "$pkg"
