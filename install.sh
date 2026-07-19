@@ -2,7 +2,7 @@
 set -e
 
 SKILLS_REPO="https://github.com/PSeitz/skills.git"
-TARGET_DIR="${HOME}/.agents/skills"
+TARGET_DIR="${HOME}/.agents"
 
 echo "==> Installing PSeitz/skills into ${TARGET_DIR}..."
 

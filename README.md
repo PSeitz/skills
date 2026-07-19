@@ -8,7 +8,7 @@ A collection of [pi](https://github.com/earendil-works/pi-coding-agent) / Claude
 curl -L https://raw.github.com/PSeitz/skills/main/install.sh | sh
 ```
 
-This clones the repo into `~/.agents/skills/`. Re-run to update.
+This clones the repo into `~/.agents/`. Re-run to update.
 
 ## Skills
 
