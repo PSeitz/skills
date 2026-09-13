@@ -1,6 +1,6 @@
-# Agent Skills
+# Pi Skills
 
-A collection of [pi](https://github.com/earendil-works/pi-coding-agent) extensions and pi / Claude Code compatible skills.
+A collection of extensions and skills for [pi](https://github.com/earendil-works/pi-coding-agent).
 
 ## Quick Install
 
