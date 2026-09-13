@@ -5,10 +5,10 @@ A collection of prompt templates, skills, and extensions for [pi](https://github
 ## Quick Install
 
 ```bash
-pi install git:github.com/PSeitz/skills
+bash <(curl -fsSL https://raw.githubusercontent.com/PSeitz/skills/main/install.sh)
 ```
 
-Run `pi update --extensions` to update.
+The installer asks before replacing the global `~/.pi/agent/AGENTS.md`. Run `pi update --extensions` to update.
 
 ## Skills
 
