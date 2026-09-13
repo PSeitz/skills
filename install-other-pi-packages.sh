@@ -9,6 +9,7 @@ fi
 PACKAGES=(
   # npm packages (published, no local dep needed)
   npm:pi-subagents
+  npm:visual-explainer
   npm:@codexstar/pi-listen
 
   # git packages
