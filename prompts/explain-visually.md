@@ -28,4 +28,4 @@ npx -y @mermaid-js/mermaid-cli -i /tmp/diagram.mmd -o /tmp/diagram.svg
 
 Fix every reported error and rerun validation until it succeeds. Remove temporary validation files. Do not claim that a diagram was validated unless a parser or renderer successfully processed it.
 
-Save the explanation to a Markdown (`.md`) file in the current working directory, with each validated diagram in a fenced `mermaid` block. Respond with the file path.
+Save the explanation to a Markdown (`.md`) file in the temporary directory of the user's OS, with each validated diagram in a fenced `mermaid` block. Respond with the file path.
