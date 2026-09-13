@@ -1,6 +1,6 @@
 # Agent Skills
 
-A collection of [pi](https://github.com/earendil-works/pi-coding-agent) / Claude Code compatible skills.
+A collection of [pi](https://github.com/earendil-works/pi-coding-agent) extensions and pi / Claude Code compatible skills.
 
 ## Quick Install
 
@@ -22,6 +22,12 @@ This clones the repo into `~/.agents/`. Re-run to update.
 | `profile` | Linux performance profiling with `perf` — hotspots, call stacks, counters |
 | `simplify-one-thing` | Find one unnecessarily complex thing, simplify it, and explain the change |
 | `handoff` | Compact the current conversation into a handoff document for another agent |
+
+## Extensions
+
+| Extension | Description |
+|-----------|-------------|
+| `/tools` | Interactively enable or disable tools for the current Pi session; selections persist in session history |
 
 ## What's a Skill?
 
