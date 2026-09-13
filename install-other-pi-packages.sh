@@ -9,9 +9,9 @@ fi
 PACKAGES=(
   # npm packages (published, no local dep needed)
   npm:pi-subagents
-  npm:pi-observability
 
   # git packages
+  git:github.com/PSeitz/pi-observability
   git:github.com/PSeitz/pi-listen
   git:github.com/PSeitz/skills
   git:github.com/PSeitz/no-expert-pi-package
