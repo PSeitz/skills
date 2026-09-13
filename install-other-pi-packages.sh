@@ -10,9 +10,9 @@ PACKAGES=(
   # npm packages (published, no local dep needed)
   npm:pi-subagents
   npm:visual-explainer
-  npm:@codexstar/pi-listen
 
   # git packages
+  git:github.com/PSeitz/pi-listen
   git:github.com/PSeitz/skills
   git:github.com/PSeitz/no-expert-pi-package
   git:github.com/PSeitz/prompt-history-pi-package
