@@ -1,6 +1,6 @@
-# Pi Prompts
+# Pi Prompts and Skills
 
-A collection of prompt templates and extensions for [pi](https://github.com/earendil-works/pi-coding-agent).
+A collection of prompt templates, skills, and extensions for [pi](https://github.com/earendil-works/pi-coding-agent).
 
 ## Quick Install
 
@@ -10,12 +10,17 @@ pi install git:github.com/PSeitz/skills
 
 Run `pi update --extensions` to update.
 
+## Skills
+
+| Skill | Description |
+|-------|-------------|
+| `/skill:commit` | Create git commits with user approval and no AI attribution |
+| `/skill:describe-pr` | Generate a comprehensive PR description and open a pull request |
+
 ## Prompts
 
 | Prompt | Description |
 |--------|-------------|
-| `/commit` | Create git commits with user approval and no AI attribution |
-| `/describe-pr` | Generate a comprehensive PR description and open a pull request |
 | `/explain-visually` | Explain a topic with Markdown and validated Mermaid diagrams |
 | `/find-skills` | Discover and install agent skills from the ecosystem |
 | `/handoff` | Compact the current conversation into a handoff document for another agent |

@@ -1,5 +1,6 @@
 ---
 description: Generate a comprehensive PR description and use it when opening a pull request
+disable-model-invocation: true
 ---
 
 # Open PR With Description
