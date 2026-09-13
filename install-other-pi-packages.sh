@@ -9,7 +9,6 @@ fi
 PACKAGES=(
   # npm packages (published, no local dep needed)
   npm:pi-subagents
-  npm:visual-explainer
 
   # git packages
   git:github.com/PSeitz/pi-listen
