@@ -18,14 +18,14 @@ $@
 - Use labels that explain the relationships, not just the components.
 - Do not invent details. Clearly mark assumptions when the available context is incomplete.
 
-## Validate the Mermaid
+## Render
 
-Before responding, validate every Mermaid block with an actual Mermaid parser or renderer. Prefer an existing project tool; otherwise render each block from a temporary `.mmd` file with Mermaid CLI, for example:
+Save the explanation to a Markdown (`.md`) file in the temporary directory of the user's OS, with each diagram in a fenced `mermaid` block. Then run the package renderer:
 
 ```bash
-npx -y @mermaid-js/mermaid-cli -i /tmp/diagram.mmd -o /tmp/diagram.svg
+node "$HOME/.pi/agent/git/github.com/PSeitz/skills/scripts/render-explanation.mjs" <markdown-file>
 ```
 
-Fix every reported error and rerun validation until it succeeds. Remove temporary validation files. Do not claim that a diagram was validated unless a parser or renderer successfully processed it.
+The renderer validates the Mermaid, applies the standard HTML template, embeds the rendered diagrams, and opens the standalone HTML in the default browser. If rendering fails, fix the Markdown and rerun it until it succeeds.
 
-Save the explanation to a Markdown (`.md`) file in the temporary directory of the user's OS, with each validated diagram in a fenced `mermaid` block. Also create a standalone HTML version in the same directory, embed the rendered diagrams and styling without external dependencies, and open it in the default browser. Respond with both file paths.
+Do not create the HTML yourself or read the renderer/template into context. Respond with both file paths.
