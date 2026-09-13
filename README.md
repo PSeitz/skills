@@ -23,6 +23,12 @@ This clones the repo into `~/.agents/`. Re-run to update.
 | `simplify-one-thing` | Find one unnecessarily complex thing, simplify it, and explain the change |
 | `handoff` | Compact the current conversation into a handoff document for another agent |
 
+## Prompts
+
+| Prompt | Description |
+|--------|-------------|
+| `/mypi` | Make changes to this Pi configuration repository |
+
 ## Extensions
 
 | Extension | Description |
