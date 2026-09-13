@@ -9,7 +9,6 @@ fi
 PACKAGES=(
   # npm packages (published, no local dep needed)
   npm:pi-subagents
-  npm:pi-powerline-footer
   npm:pi-observability
 
   # git packages
