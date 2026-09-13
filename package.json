@@ -1,0 +1,15 @@
+{
+  "name": "pseitz-pi-skills",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@mermaid-js/mermaid-cli": "11.17.0",
+    "marked": "18.0.13"
+  },
+  "allowScripts": {
+    "puppeteer@25.10.0": true
+  }
+}

@@ -5,6 +5,7 @@ import { mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { basename, dirname, extname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { marked } from "marked";
 
 const args = process.argv.slice(2);
 const noOpen = args.includes("--no-open");
@@ -18,7 +19,9 @@ if (positional.length < 1 || positional.length > 2) {
 const input = resolve(positional[0]);
 const output = resolve(positional[1] ?? input.slice(0, -extname(input).length) + ".html");
 const scriptDir = dirname(fileURLToPath(import.meta.url));
-const templatePath = join(scriptDir, "..", "templates", "explain-visually.html");
+const packageDir = join(scriptDir, "..");
+const templatePath = join(packageDir, "templates", "explain-visually.html");
+const mmdcPath = join(packageDir, "node_modules", ".bin", process.platform === "win32" ? "mmdc.cmd" : "mmdc");
 const workDir = mkdtempSync(join(tmpdir(), "explain-visually-"));
 
 function run(command, commandArgs) {
@@ -47,7 +50,7 @@ try {
     const sourcePath = join(workDir, `diagram-${diagramIndex}.mmd`);
     const svgPath = join(workDir, `diagram-${diagramIndex}.svg`);
     writeFileSync(sourcePath, match[1]);
-    run("npx", ["-y", "@mermaid-js/mermaid-cli", "-i", sourcePath, "-o", svgPath, "-b", "transparent"]);
+    run(mmdcPath, ["-i", sourcePath, "-o", svgPath, "-b", "transparent"]);
 
     const svg = readFileSync(svgPath, "utf8");
     const svgStart = svg.indexOf("<svg");
@@ -61,16 +64,11 @@ try {
   if (diagramIndex === 0) throw new Error("No fenced Mermaid blocks found");
   renderedMarkdown += markdown.slice(cursor);
 
-  const renderedMarkdownPath = join(workDir, "rendered.md");
-  const bodyPath = join(workDir, "body.html");
-  writeFileSync(renderedMarkdownPath, renderedMarkdown);
-  run("npx", ["-y", "marked", "--gfm", "-i", renderedMarkdownPath, "-o", bodyPath]);
-
   const title = markdown.match(/^#\s+(.+)$/m)?.[1] ?? basename(input, extname(input));
   const template = readFileSync(templatePath, "utf8");
   const html = template
     .replace("{{TITLE}}", () => escapeHtml(title))
-    .replace("{{CONTENT}}", () => readFileSync(bodyPath, "utf8"));
+    .replace("{{CONTENT}}", () => marked.parse(renderedMarkdown, { gfm: true }));
   writeFileSync(output, html);
 
   if (!noOpen) {
