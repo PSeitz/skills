@@ -1,5 +1,5 @@
 ---
-description: Create a visual explanation as Markdown with validated Mermaid diagrams
+description: Create a visual explanation as Markdown and open it as standalone HTML
 argument-hint: "<topic>"
 ---
 
@@ -28,4 +28,4 @@ npx -y @mermaid-js/mermaid-cli -i /tmp/diagram.mmd -o /tmp/diagram.svg
 
 Fix every reported error and rerun validation until it succeeds. Remove temporary validation files. Do not claim that a diagram was validated unless a parser or renderer successfully processed it.
 
-Save the explanation to a Markdown (`.md`) file in the temporary directory of the user's OS, with each validated diagram in a fenced `mermaid` block. Respond with the file path.
+Save the explanation to a Markdown (`.md`) file in the temporary directory of the user's OS, with each validated diagram in a fenced `mermaid` block. Also create a standalone HTML version in the same directory, embed the rendered diagrams and styling without external dependencies, and open it in the default browser. Respond with both file paths.
