@@ -1,24 +1,9 @@
-#!/bin/bash
-set -e
+#!/usr/bin/env bash
+set -euo pipefail
 
-SKILLS_REPO="https://github.com/PSeitz/skills.git"
-TARGET_DIR="${HOME}/.agents"
-
-echo "==> Installing PSeitz/skills into ${TARGET_DIR}..."
-
-mkdir -p "${TARGET_DIR}"
-cd "${TARGET_DIR}"
-
-if [ -d .git ]; then
-    echo "  -> Already a git repo, pulling updates..."
-    git pull --ff-only
-else
-    echo "  -> Initializing git repo..."
-    git init
-    git remote add origin "${SKILLS_REPO}"
-    git fetch --depth 1 origin main
-    git checkout -b main FETCH_HEAD
+if ! command -v pi >/dev/null 2>&1; then
+  echo "error: pi is not installed or not on PATH" >&2
+  exit 1
 fi
 
-echo "==> Done!"
-ls "${TARGET_DIR}/"
+pi install git:github.com/PSeitz/skills

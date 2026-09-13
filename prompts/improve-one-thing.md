@@ -1,7 +1,5 @@
 ---
-name: improve-one-thing
 description: Find one high-leverage improvement in the current codebase, make it, and explain the change clearly.
-disable-model-invocation: true
 ---
 
 # Improve One Thing

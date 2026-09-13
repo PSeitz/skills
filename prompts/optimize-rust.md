@@ -1,15 +1,13 @@
 ---
-name: optimize-rust
 description: >-
   Profile and optimize Rust code. Runs perf/instruments to find actual
-  bottlenecks before changing anything. Use when user asks to "make this
-  faster", "optimize", "profile", or "why is this slow".
+  bottlenecks before changing anything.
 argument-hint: "[file-or-function-or-benchmark]"
-allowed-tools: Read Grep Glob Bash(cargo *) Bash(perf *) Bash(flamegraph *)
-disable-model-invocation: true
 ---
 
 # Rust Performance Optimization
+
+Target: $@
 
 **First principle: measure.** A benchmark tells you *how long* something
 takes. A profiler tells you *where* the time goes. You need both — the

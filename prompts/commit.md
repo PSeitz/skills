@@ -1,6 +1,5 @@
 ---
 description: Create git commits with user approval and no AI attribution
-disable-model-invocation: true
 ---
 
 # Commit Changes

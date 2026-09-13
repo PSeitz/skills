@@ -1,13 +1,13 @@
 ---
-name: profile
-description: Linux-only performance profiling workflow using perf. Use when investigating slow code, benchmark regressions, CPU hotspots, call stacks, or when the user asks to profile a command, test, or benchmark on Linux.
-compatibility: Linux with perf installed. Requires sufficient perf_event permissions for sampling.
-disable-model-invocation: true
+description: Profile a command, test, or benchmark on Linux using perf
+argument-hint: "<command>"
 ---
 
 # Profile
 
-Use this skill to profile CPU performance with Linux `perf`.
+Profile CPU performance with Linux `perf`.
+
+Command: $@
 
 ## When to use
 
@@ -38,10 +38,10 @@ cargo build --release
 cargo bench --no-run
 ```
 
-3. Run the helper script from the skill directory, passing the command after `--`:
+3. Run the helper script from this package, passing the command after `--`:
 
 ```bash
-~/.agents/skills/profile/scripts/perf-profile.sh -- cargo bench all_unique
+~/.pi/agent/git/github.com/PSeitz/skills/scripts/perf-profile.sh -- cargo bench all_unique
 ```
 
 The script writes artifacts under `.pi/profiles/<timestamp>/` in the current working directory.

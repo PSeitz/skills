@@ -1,7 +1,5 @@
 ---
-name: simplify-one-thing
 description: Find one unnecessarily complex thing in the current codebase, simplify it, and explain the change.
-disable-model-invocation: true
 ---
 
 # Simplify One Thing

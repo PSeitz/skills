@@ -1,33 +1,28 @@
-# Pi Skills
+# Pi Prompts
 
-A collection of extensions and skills for [pi](https://github.com/earendil-works/pi-coding-agent).
+A collection of prompt templates and extensions for [pi](https://github.com/earendil-works/pi-coding-agent).
 
 ## Quick Install
 
 ```bash
-curl -L https://raw.github.com/PSeitz/skills/main/install.sh | sh
+pi install git:github.com/PSeitz/skills
 ```
 
-This clones the repo into `~/.agents/`. Re-run to update.
-
-## Skills
-
-| Skill | Description |
-|-------|-------------|
-| `commit` | Create git commits with user approval and no AI attribution |
-| `describe-pr` | Generate a comprehensive PR description and open a pull request |
-| `find-skills` | Discover and install agent skills from the ecosystem |
-| `improve-one-thing` | Find one high-leverage improvement, make it, and explain it |
-| `optimize-rust` | Profile and optimize Rust code with `perf` (Linux) or `instruments` (macOS) |
-| `profile` | Linux performance profiling with `perf` — hotspots, call stacks, counters |
-| `simplify-one-thing` | Find one unnecessarily complex thing, simplify it, and explain the change |
-| `handoff` | Compact the current conversation into a handoff document for another agent |
+Run `pi update --extensions` to update.
 
 ## Prompts
 
 | Prompt | Description |
 |--------|-------------|
+| `/commit` | Create git commits with user approval and no AI attribution |
+| `/describe-pr` | Generate a comprehensive PR description and open a pull request |
+| `/find-skills` | Discover and install agent skills from the ecosystem |
+| `/handoff` | Compact the current conversation into a handoff document for another agent |
+| `/improve-one-thing` | Find and apply one high-leverage improvement |
 | `/mypi` | Make changes to this Pi configuration repository |
+| `/optimize-rust` | Profile and optimize Rust code based on measurements |
+| `/profile` | Profile a command on Linux with `perf` |
+| `/simplify-one-thing` | Simplify one unnecessarily complex part of a codebase |
 
 ## Extensions
 
@@ -35,6 +30,6 @@ This clones the repo into `~/.agents/`. Re-run to update.
 |-----------|-------------|
 | `/tools` | Interactively enable or disable tools for the current Pi session; selections persist in session history |
 
-## What's a Skill?
+## What's a Prompt Template?
 
-Skills are specialized instructions that agentic coding tools load on demand. Each skill lives in its own directory with a `SKILL.md` file containing YAML frontmatter (name, description, allowed tools) and markdown instructions. When your task matches the description, the agent automatically uses the skill.
+Prompt templates are explicit, reusable workflows that are loaded only when invoked. Type `/` followed by a prompt name; unlike skills, they do not add descriptions to the model context by default.
