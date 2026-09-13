@@ -16,6 +16,7 @@ Run `pi update --extensions` to update.
 |--------|-------------|
 | `/commit` | Create git commits with user approval and no AI attribution |
 | `/describe-pr` | Generate a comprehensive PR description and open a pull request |
+| `/explain-visually` | Explain a topic with Markdown and validated Mermaid diagrams |
 | `/find-skills` | Discover and install agent skills from the ecosystem |
 | `/handoff` | Compact the current conversation into a handoff document for another agent |
 | `/improve-one-thing` | Find and apply one high-leverage improvement |
